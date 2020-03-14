@@ -13,12 +13,11 @@ import Footer from '../Footer/Footer';
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
-import AboutPage from '..Pages/AboutPage/AboutPage';
-import UserPage from '..Pages/UserPage/UserPage';
-import InfoPage from '..Pages/InfoPage/InfoPage';
-import LandingPage from '..Pages/LandingPage/LandingPage';
-import LoginPage from '..Pages/LoginPage/LoginPage';
-import RegisterPage from '..Pages/RegisterPage/RegisterPage';
+import UserPage from '../Pages/UserPage/UserPage';
+import InfoPage from '../Pages/InfoPage/InfoPage';
+import LandingPage from '../Pages/LandingPage/LandingPage';
+import LoginPage from '../Pages/LoginPage/LoginPage';
+import RegisterPage from '../Pages/RegisterPage/RegisterPage';
 
 import './App.css';
 
@@ -37,7 +36,6 @@ class App extends Component {
 						<Redirect exact from='/' to='/home' />
 						{/* Visiting localhost:3000/about will show the about page.
             This is a route anyone can see, no login necessary */}
-						<Route exact path='/about' component={AboutPage} />
 						<Route exact path='/home' component={LandingPage} />
 						{/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
